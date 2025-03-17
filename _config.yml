@@ -1,8 +1,7 @@
 #-------------------------------
 # General Site Settings
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+baseurl: "" # No subpath since it's at the root
+url: "https://horizon.github.io" # Your GitHub Pages URL
 
 #-------------------------------
 # Build Settings
@@ -22,9 +21,16 @@ defaults:
     values:
       permalink: /:basename:output_ext
 
-
 include:
   - _pages
 
 sass:
   style: compressed
+
+# Exclude unnecessary files from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
